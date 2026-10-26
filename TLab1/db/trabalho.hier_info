@@ -1,0 +1,61 @@
+|PnZ10
+I0 => PnZ4:UC.I0
+I1 => PnZ4:UC.I1
+I2 => PnZ4:UA.I0
+I3 => PnZ4:UA.I1
+I4 => PnZ4:UA.I2
+I5 => PnZ4:UA.I3
+I6 => PnZ4:UB.I0
+I7 => PnZ4:UB.I1
+I8 => PnZ4:UB.I2
+I9 => PnZ4:UB.I3
+PnI => ParImpar:UR.PnI
+P <= ParImpar:UR.R
+nZ <= nZ.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|PnZ10|PnZ4:UA
+I0 => P.IN0
+I0 => nZ.IN0
+I1 => P.IN1
+I1 => nZ.IN1
+I2 => P.IN1
+I2 => nZ.IN1
+I3 => P.IN1
+I3 => nZ.IN1
+P <= P.DB_MAX_OUTPUT_PORT_TYPE
+nZ <= nZ.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|PnZ10|PnZ4:UB
+I0 => P.IN0
+I0 => nZ.IN0
+I1 => P.IN1
+I1 => nZ.IN1
+I2 => P.IN1
+I2 => nZ.IN1
+I3 => P.IN1
+I3 => nZ.IN1
+P <= P.DB_MAX_OUTPUT_PORT_TYPE
+nZ <= nZ.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|PnZ10|PnZ4:UC
+I0 => P.IN0
+I0 => nZ.IN0
+I1 => P.IN1
+I1 => nZ.IN1
+I2 => P.IN1
+I2 => nZ.IN1
+I3 => P.IN1
+I3 => nZ.IN1
+P <= P.DB_MAX_OUTPUT_PORT_TYPE
+nZ <= nZ.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|PnZ10|ParImpar:UR
+I => R.IN0
+PnI => R.IN1
+R <= R.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,11 @@
+LIBRARY IEEE;
+use IEEE.std_logic_1164.all;
+
+entity ADDSUB is
+	port ( A: in std_logic_vector(3 downto 0);
+		B: in std_logic_vector(3 downto 0);
+		Cbi : in std_logic;
+		OP : in std_logic;
+		R: out std_logic_vector(3 downto 0);
+		Cout: out std_logic);
+end ADDSUB;

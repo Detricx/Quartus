@@ -1,0 +1,84 @@
+|AddSub
+A[0] => ADDER:A0.A[0]
+A[1] => ADDER:A0.A[1]
+A[2] => ADDER:A0.A[2]
+A[3] => ADDER:A0.A[3]
+B[0] => Bx[0].IN0
+B[1] => Bx[1].IN0
+B[2] => Bx[2].IN0
+B[3] => Bx[3].IN0
+Cbi => Cix.IN0
+OP => Cix.IN1
+OP => Bx[0].IN1
+OP => Bx[1].IN1
+OP => Bx[2].IN1
+OP => Bx[3].IN1
+OP => Cout.IN1
+R[0] <= ADDER:A0.S[0]
+R[1] <= ADDER:A0.S[1]
+R[2] <= ADDER:A0.S[2]
+R[3] <= ADDER:A0.S[3]
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|AddSub|ADDER:A0
+A[0] => FULLADDER:FA0.A
+A[1] => FULLADDER:FA1.A
+A[2] => FULLADDER:FA2.A
+A[3] => FULLADDER:FA3.A
+B[0] => FULLADDER:FA0.B
+B[1] => FULLADDER:FA1.B
+B[2] => FULLADDER:FA2.B
+B[3] => FULLADDER:FA3.B
+C0 => FULLADDER:FA0.Cin
+S[0] <= FULLADDER:FA0.R
+S[1] <= FULLADDER:FA1.R
+S[2] <= FULLADDER:FA2.R
+S[3] <= FULLADDER:FA3.R
+C4 <= FULLADDER:FA3.Cout
+
+
+|AddSub|ADDER:A0|FULLADDER:FA0
+A => R.IN0
+A => Cout.IN0
+B => R.IN1
+B => Cout.IN1
+Cin => R.IN1
+Cin => Cout.IN1
+R <= R.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|AddSub|ADDER:A0|FULLADDER:FA1
+A => R.IN0
+A => Cout.IN0
+B => R.IN1
+B => Cout.IN1
+Cin => R.IN1
+Cin => Cout.IN1
+R <= R.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|AddSub|ADDER:A0|FULLADDER:FA2
+A => R.IN0
+A => Cout.IN0
+B => R.IN1
+B => Cout.IN1
+Cin => R.IN1
+Cin => Cout.IN1
+R <= R.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|AddSub|ADDER:A0|FULLADDER:FA3
+A => R.IN0
+A => Cout.IN0
+B => R.IN1
+B => Cout.IN1
+Cin => R.IN1
+Cin => Cout.IN1
+R <= R.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
