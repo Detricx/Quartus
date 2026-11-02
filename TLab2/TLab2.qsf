@@ -68,21 +68,24 @@ set_global_assignment -name VERILOG_FILE DE10_LITE_Golden_Top.v
 #============================================================
 # SW
 #============================================================
-set_location_assignment PIN_C10 -to CBi
-set_location_assignment PIN_C11 -to X[0]
-set_location_assignment PIN_D12 -to X[1]
-set_location_assignment PIN_C12 -to X[2]
-set_location_assignment PIN_A12 -to X[3]
-set_location_assignment PIN_B12 -to Y[0]
-set_location_assignment PIN_A13 -to Y[1]
-set_location_assignment PIN_A14 -to Y[2]
-set_location_assignment PIN_B14 -to Y[3]
+set_location_assignment PIN_C10 -to X[0]
+set_location_assignment PIN_C11 -to X[1]
+set_location_assignment PIN_D12 -to X[2]
+set_location_assignment PIN_C12 -to X[3]
+set_location_assignment PIN_A12 -to Y[0]
+set_location_assignment PIN_B12 -to Y[1]
+set_location_assignment PIN_A13 -to Y[2]
+set_location_assignment PIN_A14 -to Y[3]
+# set_location_assignment PIN_B14 -to I8
 # set_location_assignment PIN_F15 -to I9
 
 #============================================================
 # Entrada PnI (KEY1)
 #============================================================
-# set_location_assignment PIN_B8 -to PnI
+#(KEY0) - PIN POR DEFINIR PARA SER O KEY0
+set_location_assignment PIN_B8 -to PnI
+#(KEY1) 
+set_location_assignment PIN_B8 -to CBi
 
 #============================================================
 # LED
@@ -91,9 +94,9 @@ set_location_assignment PIN_A8 -to GE
 set_location_assignment PIN_A9 -to Z
 set_location_assignment PIN_A10 -to OV
 set_location_assignment PIN_B10 -to CBo
-set_location_assignment PIN_D13 -to R
-#set_location_assignment PIN_C13 -to LEDR[5]
-#set_location_assignment PIN_E14 -to LEDR[6]
-#set_location_assignment PIN_D14 -to LEDR[7]
+set_location_assignment PIN_D13 -to R[0]
+set_location_assignment PIN_C13 -to R[1]
+set_location_assignment PIN_E14 -to R[2]
+set_location_assignment PIN_D14 -to R[3]
 #set_location_assignment PIN_A11 -to LEDR[8]
 #set_location_assignment PIN_B11 -to LEDR[9]
