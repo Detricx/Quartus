@@ -17,7 +17,7 @@
 -- PROGRAM "Quartus Prime"
 -- VERSION "Version 25.1std.0 Build 1129 10/21/2025 SC Lite Edition"
 
--- DATE "10/26/2026 17:52:28"
+-- DATE "11/02/2026 11:42:30"
 
 -- 
 -- Device: Altera 10M50DAF484C6GES Package FBGA484
@@ -99,8 +99,8 @@ ENTITY 	PnZ10 IS
 	I8 : IN std_logic;
 	I9 : IN std_logic;
 	PnI : IN std_logic;
-	P : OUT std_logic;
-	nZ : OUT std_logic
+	P : BUFFER std_logic;
+	nZ : BUFFER std_logic
 	);
 END PnZ10;
 
@@ -169,6 +169,7 @@ SIGNAL \UR|R~1_combout\ : std_logic;
 SIGNAL \nZ~0_combout\ : std_logic;
 SIGNAL \nZ~1_combout\ : std_logic;
 SIGNAL \nZ~2_combout\ : std_logic;
+SIGNAL \UR|ALT_INV_R~1_combout\ : std_logic;
 
 COMPONENT hard_block
     PORT (
@@ -199,6 +200,7 @@ ww_devpor <= devpor;
 \~QUARTUS_CREATED_ADC1~_CHSEL_bus\ <= (\~QUARTUS_CREATED_GND~I_combout\ & \~QUARTUS_CREATED_GND~I_combout\ & \~QUARTUS_CREATED_GND~I_combout\ & \~QUARTUS_CREATED_GND~I_combout\ & \~QUARTUS_CREATED_GND~I_combout\);
 
 \~QUARTUS_CREATED_ADC2~_CHSEL_bus\ <= (\~QUARTUS_CREATED_GND~I_combout\ & \~QUARTUS_CREATED_GND~I_combout\ & \~QUARTUS_CREATED_GND~I_combout\ & \~QUARTUS_CREATED_GND~I_combout\ & \~QUARTUS_CREATED_GND~I_combout\);
+\UR|ALT_INV_R~1_combout\ <= NOT \UR|R~1_combout\;
 auto_generated_inst : hard_block
 PORT MAP (
 	devoe => ww_devoe,
@@ -226,7 +228,7 @@ GENERIC MAP (
 	open_drain_output => "false")
 -- pragma translate_on
 PORT MAP (
-	i => \UR|R~1_combout\,
+	i => \UR|ALT_INV_R~1_combout\,
 	devoe => ww_devoe,
 	o => \P~output_o\);
 

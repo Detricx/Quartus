@@ -10,8 +10,8 @@ I7 => PnZ4:UB.I1
 I8 => PnZ4:UB.I2
 I9 => PnZ4:UB.I3
 PnI => ParImpar:UR.PnI
-P <= ParImpar:UR.R
-nZ <= nZ.DB_MAX_OUTPUT_PORT_TYPE
+P << ParImpar:UR.R
+nZ << nZ.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |PnZ10|PnZ4:UA

@@ -9,5 +9,5 @@ end ParImpar;
 
 architecture logic of ParImpar is
 begin
-	R <= I xor PnI;
+	R <= I xnor PnI;
 end logic;
