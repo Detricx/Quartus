@@ -39,7 +39,7 @@
 
 set_global_assignment -name FAMILY "MAX 10"
 set_global_assignment -name DEVICE 10M50DAF484C6GES
-set_global_assignment -name TOP_LEVEL_ENTITY AddSub
+set_global_assignment -name TOP_LEVEL_ENTITY AU
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 25.1STD.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "11:58:11  OCTOBER 26, 2026"
 set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
@@ -51,11 +51,6 @@ set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_symbol
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_signal_integrity
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_boundary_scan
-set_global_assignment -name SOURCE_FILE somatorio.qsf
-set_global_assignment -name VHDL_FILE FullAdder.vhd
-set_global_assignment -name VHDL_FILE Adder.vhd
-set_global_assignment -name VHDL_FILE ArchAdder.vhd
-set_global_assignment -name VHDL_FILE AddSub.vhd
 
 #-------------------- COPY PAST ---------------------------
 
@@ -72,8 +67,8 @@ set_location_assignment PIN_B12 -to B[1]
 set_location_assignment PIN_A13 -to B[2]
 set_location_assignment PIN_A14 -to B[3]
 
-set_location_assignment PIN_B14 -to OP
-set_location_assignment PIN_F15 -to Cbi
+set_location_assignment PIN_B14 -to OPau
+set_location_assignment PIN_F15 -to CBi
 
 #============================================================
 # LED
@@ -82,13 +77,20 @@ set_location_assignment PIN_A8 -to R[0]
 set_location_assignment PIN_A9 -to R[1]
 set_location_assignment PIN_A10 -to R[2]
 set_location_assignment PIN_B10 -to R[3]
-set_location_assignment PIN_D13 -to Cout
+set_location_assignment PIN_D13 -to CBo
+set_location_assignment PIN_C13 -to OV
 
-#set_location_assignment PIN_C13 -to LEDR[5]
 #set_location_assignment PIN_E14 -to LEDR[6]
 #set_location_assignment PIN_D14 -to LEDR[7]
 #set_location_assignment PIN_A11 -to LEDR[8]
 #set_location_assignment PIN_B11 -to LEDR[9]
+
+#============================================================
+# Entrada PnI (KEY1)
+#============================================================
+
+# set_location_assignment PIN_B8 -to KEY[0] 
+# set_location_assignment PIN_B8 -to KEY[1]
 
 #============================================================
 # End of pin and io_standard assignments
@@ -99,12 +101,14 @@ set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name VHDL_FILE flags.vhd
+set_global_assignment -name SOURCE_FILE somatorio.qsf
+set_global_assignment -name VHDL_FILE FullAdder.vhd
+set_global_assignment -name VHDL_FILE Adder.vhd
+set_global_assignment -name VHDL_FILE ArchAdder.vhd
+set_global_assignment -name VHDL_FILE AddSub.vhd
+set_global_assignment -name VHDL_FILE AU.vhd
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_global_assignment -name VHDL_FILE moodleFiles/xnorl4.vhd
-set_global_assignment -name SOURCE_FILE 191026Projetct.qsf
-set_global_assignment -name VHDL_FILE moodleFiles/orl4.vhd
-set_global_assignment -name VHDL_FILE moodleFiles/mux4.vhd
-set_global_assignment -name VHDL_FILE moodleFiles/lucirc.vhd
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

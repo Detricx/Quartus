@@ -20,7 +20,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "Cout",
+					"name" : "CBo",
+					"strict" : false
+				},
+				{
+					"name" : "OV",
 					"strict" : false
 				},
 				{
@@ -32,7 +36,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "Cbi",
+					"name" : "CBi",
 					"strict" : false
 				},
 				{
@@ -44,7 +48,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "OP",
+					"name" : "OPau",
 					"strict" : false
 				},
 				{
@@ -56,11 +60,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "A[3]",
+					"name" : "B[3]",
 					"strict" : false
 				},
 				{
-					"name" : "B[3]",
+					"name" : "A[3]",
 					"strict" : false
 				}
 			]

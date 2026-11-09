@@ -1,0 +1,15 @@
+LIBRARY IEEE;
+use IEEE.std_logic_1164.all;
+
+
+
+
+
+architecture ARCH_ADDSUB of ADDSUB is
+component ADDER is
+	port ( 
+		A, B: in std_logic_vector(3 downto 0);
+		C0 : in std_logic;
+		S: out std_logic_vector(3 downto 0);
+		C4: out std_logic);
+end component;
