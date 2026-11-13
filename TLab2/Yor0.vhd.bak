@@ -1,0 +1,16 @@
+LIBRARY IEEE;
+use IEEE.std_logic_1164.all;
+
+entity YOR0 is
+PORT(
+	Y: in std_logic_vector(3 downto 0);
+	OP_A: in std_logic;
+	B: out std_logic_vector(3 downto 0)
+);
+end YOR0;
+
+-- Indica se uso o Y para as operações ou não
+architecture ARCH_Yor0 of Yor0 is
+begin 
+	B <= Y when OP_A = '0' else "0000";
+end ARCH_Yor0;
