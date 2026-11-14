@@ -1,0 +1,17 @@
+LIBRARY IEEE;
+use IEEE.std_logic_1164.all;
+
+entity MUX3 is
+	port(
+		D0, D1, D2: in std_logic_vector(3 downto 0);
+		S0, S1, S2: in std_logic;
+		R: out std_logic_vector(3 downto 0));
+end MUX3;
+
+architecture ARCH_MUX3 of MUX3 is
+begin
+	-- Selecao do resultado final mediante a sua operação
+	R <= (D0 and (3 downto 0 => S0)) or
+		(D1 and (3 downto 0 => S1)) or
+		(D2 and (3 downto 0 => S2));
+end ARCH_MUX3;

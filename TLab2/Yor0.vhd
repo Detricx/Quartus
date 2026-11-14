@@ -12,5 +12,8 @@ end YOR0;
 -- Indica se uso o Y para as operações (OP_A = 0) ou não (OP_A = 1)
 architecture ARCH_Yor0 of Yor0 is
 begin 
-	B <= Y when OP_A = '0' else "0000";
+	B(0) <= Y(0) and not OP_A;
+	B(1) <= Y(1) and not OP_A;
+	B(2) <= Y(2) and not OP_A;
+	B(3) <= Y(3) and not OP_A;
 end ARCH_Yor0;

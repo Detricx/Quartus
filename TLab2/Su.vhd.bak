@@ -1,0 +1,16 @@
+LIBRARY IEEE;
+use IEEE.std_logic_1164.all;
+
+entity SU is
+	port(
+		W: in std_logic_vector(3 downto 0);
+		OP: in std_logic;
+		R: out std_logic_vector(3 downto 0);
+		COut: out std_logic);
+end SU;
+
+architecture ARCH_SU of SU is
+begin
+R    <= (W(2 downto 0) & '0') when OP = '0' else (W(3) & W(3 downto 1));
+COut <= not OP and W(3);
+end ARCH_SU;

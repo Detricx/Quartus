@@ -39,7 +39,7 @@
 
 set_global_assignment -name FAMILY "MAX 10"
 set_global_assignment -name DEVICE 10M08DAF484C8G
-set_global_assignment -name TOP_LEVEL_ENTITY AU
+set_global_assignment -name TOP_LEVEL_ENTITY ALU
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 25.1STD.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "10:26:03  NOVEMBER 13, 2026"
 set_global_assignment -name LAST_QUARTUS_VERSION "25.1std.0 Lite Edition"
@@ -56,9 +56,6 @@ set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_boundary_scan
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name SOURCE_FILE TLab2/TLab2.qsf
 set_global_assignment -name VHDL_FILE TLab2/TLAB2_tb.vhd
 set_global_assignment -name VHDL_FILE TLab2/FullAdder.vhd
@@ -69,4 +66,10 @@ set_global_assignment -name VHDL_FILE TLab2/AddSub.vhd
 set_global_assignment -name VHDL_FILE TLab2/Adder.vhd
 set_global_assignment -name VHDL_FILE TLab2/Yor0.vhd
 set_global_assignment -name VHDL_FILE TLab2/ALU.vhd
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name VHDL_FILE TLab2/Lu.vhd
+set_global_assignment -name VHDL_FILE TLab2/Su.vhd
+set_global_assignment -name VHDL_FILE TLab2/MUX3.vhd
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Fri Nov 13 12:00:14 2026
+Analysis & Synthesis Status : Successful - Sat Nov 14 13:54:31 2026
 Quartus Prime Version : 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
 Revision Name : TLab2
-Top-level Entity Name : AU
+Top-level Entity Name : ALU
 Family : MAX 10
-Total logic elements : 9
-    Total combinational functions : 9
+Total logic elements : 30
+    Total combinational functions : 30
     Dedicated logic registers : 0
 Total registers : 0
-Total pins : 16
+Total pins : 20
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0
